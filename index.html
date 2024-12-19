@@ -4,54 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asphar - Ciberseguridad para Pequeñas Empresas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Global Styles */
+        * {
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        /* Header */
         header {
-            background: #0a4a6e;
+            background: linear-gradient(135deg, #0a4a6e, #0d6ba5);
             color: #fff;
-            padding: 20px 10px;
             text-align: center;
+            padding: 40px 20px;
+            position: relative;
         }
 
         header img {
-            max-width: 100px; /* Ajusta el tamaño del logo */
-            margin-bottom: 10px;
+            max-width: 120px;
+            margin-bottom: 15px;
+            animation: fadeInDown 1s ease-in-out;
         }
 
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Navigation */
         nav {
             background: #0d6ba5;
             color: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
             display: flex;
             justify-content: center;
-            padding: 10px 0;
         }
 
-        nav a {
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        nav ul li a:hover {
+            color: #ffe082;
         }
 
+        /* Sections */
         section {
-            padding: 20px;
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 40px auto;
         }
 
+        section h2 {
+            font-size: 2em;
+            color: #0a4a6e;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: #0a4a6e;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        section p, section ul {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        section ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section ul li::before {
+            content: '✔';
+            color: #0a4a6e;
+            margin-right: 10px;
+        }
+
+        /* Footer */
         footer {
             background: #0a4a6e;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: #ffe082;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -59,38 +193,42 @@
     <header>
         <img src="./images/logo.png" alt="Logo de Asphar">
         <h1>Asphar</h1>
-        <p>Ciberseguridad para Pequeñas Empresas</p>
+        <p>Tu socio confiable en ciberseguridad para pequeñas empresas</p>
     </header>
 
     <nav>
-        <a href="#about">Sobre Nosotros</a>
-        <a href="#services">Servicios</a>
-        <a href="#contact">Contacto</a>
+        <ul>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
     </nav>
 
     <section id="about">
         <h2>Sobre Nosotros</h2>
-        <p>En Asphar, nos especializamos en proteger a las pequeñas empresas frente a las amenazas digitales. Nuestro equipo experto ofrece soluciones adaptadas a tus necesidades.</p>
+        <p>En Asphar, entendemos los desafíos que enfrentan las pequeñas empresas en el mundo digital. Nuestro equipo está dedicado a protegerte contra amenazas cibernéticas y a asegurar tus datos más importantes.</p>
     </section>
 
     <section id="services">
         <h2>Servicios</h2>
         <ul>
-            <li>Auditorías de seguridad</li>
-            <li>Protección contra ciberataques</li>
-            <li>Implementación de sistemas seguros</li>
+            <li>Auditorías de seguridad informática</li>
+            <li>Protección contra malware y ransomware</li>
+            <li>Implementación de cortafuegos avanzados</li>
+            <li>Formación para empleados sobre ciberseguridad</li>
         </ul>
     </section>
 
     <section id="contact">
         <h2>Contacto</h2>
-        <p>Correo: contacto@asphar.es</p>
-        <p>Teléfono: +34 600 123 456</p>
-        <p>Dirección: Calle Seguridad 123, Madrid, España</p>
+        <p><strong>Email:</strong> <a href="mailto:contacto@asphar.es">contacto@asphar.es</a></p>
+        <p><strong>Teléfono:</strong> +34 600 123 456</p>
+        <p><strong>Dirección:</strong> Calle Seguridad 123, Madrid, España</p>
     </section>
 
     <footer>
         <p>&copy; 2024 Asphar. Todos los derechos reservados.</p>
+        <p><a href="#about">Volver al inicio</a></p>
     </footer>
 </body>
 </html>
